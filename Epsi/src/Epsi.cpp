@@ -6,7 +6,7 @@
  *
  * Epsi is released under 2-Clause BSD license.
  *
- * $Id: Epsi.cpp 639 2020-08-15 23:45:26Z li $
+ * $Id: Epsi.cpp 641 2020-08-16 15:23:50Z li $
  */
 
 #include "Epsi.h"
@@ -40,10 +40,10 @@ int main(int argc, char *argv[]) {
   opt.add("--data", "SIZE", "", "data set size");
   opt.add("--delimiter", "CHAR", ".", "set itemset delimiter to CHAR");
   opt.add("--item", "SIZE", "", "item ID size, or 'auto' for auto-detection");
-  opt.add("--max-gap", "NUMBER", "0", "set maximum gap to NUMBER");
+  opt.add("--max-distance", "NUMBER", "0", "set maximum distance to NUMBER");
   opt.add("--max-items", "NUMBER", "0", "set maximum items to NUMBER");
   opt.add("--max-itemsets", "NUMBER", "0", "set maximum itemsets to NUMBER");
-  opt.add("--min-gap", "NUMBER", "0", "set minimum gap to NUMBER");
+  opt.add("--min-distance", "NUMBER", "0", "set minimum distance to NUMBER");
   opt.add("--min-items", "NUMBER", "0", "set minimum items to NUMBER");
   opt.add("--min-itemsets", "NUMBER", "0", "set minimum itemsets to NUMBER");
   opt.add("--without-pruning", "do not prune non-frequent items");
@@ -222,16 +222,16 @@ int main(int argc, char *argv[]) {
     log(0) << "Item: " << opt["--item"];
   }
 
-  // --max-gap=NUMBER
-  // set maximum gap to NUMBER
-  auto MaxGap = (int) opt.number("--max-gap");
-  if (MaxGap < 0) {
-    opt.usage("invalid maximum gap value");
+  // --max-distance=NUMBER
+  // set maximum distance to NUMBER
+  auto MaxDistance = (int) opt.number("--max-distance");
+  if (MaxDistance < 0) {
+    opt.usage("invalid maximum distance value");
   } else {
-    Setup::MaxGap = (size_t) MaxGap;
+    Setup::MaxDistance = (size_t) MaxDistance;
   }
-  if (MaxGap) {
-    log(0) << "Maximum gap: " << MaxGap;
+  if (MaxDistance) {
+    log(0) << "Maximum distance: " << MaxDistance;
   }
 
   // --max-items=NUMBER
@@ -258,16 +258,16 @@ int main(int argc, char *argv[]) {
     log(0) << "Maximum order: " << MaxOrder;
   }
 
-  // --min-gap=NUMBER
-  // set minimum gap to NUMBER
-  auto MinGap = (int) opt.number("--min-gap");
-  if (MinGap < 0) {
-    opt.usage("invalid minimum gap value");
+  // --min-distance=NUMBER
+  // set minimum distance to NUMBER
+  auto MinDistance = (int) opt.number("--min-distance");
+  if (MinDistance < 0) {
+    opt.usage("invalid minimum distance value");
   } else {
-    Setup::MinGap = (size_t) MinGap;
+    Setup::MinDistance = (size_t) MinDistance;
   }
-  if (MinGap) {
-    log(0) << "Minimum gap: " << MinGap;
+  if (MinDistance) {
+    log(0) << "Minimum distance: " << MinDistance;
   }
 
   // --min-items=NUMBER
@@ -295,8 +295,8 @@ int main(int argc, char *argv[]) {
   }
 
   // Verification of maximum/minimum values
-  if (MaxGap && MaxGap < MinGap) {
-    opt.usage("invalid maximum/minimum gap values");
+  if (MaxDistance && MaxDistance < MinDistance) {
+    opt.usage("invalid maximum/minimum distance values");
   }
   if (MaxLength && MaxLength < MinLength) {
     opt.usage("invalid maximum/minimum number of items");
