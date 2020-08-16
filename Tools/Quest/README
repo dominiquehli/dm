@@ -1,7 +1,8 @@
 IBM Quest Synthetic Data Generator
 
 I cannot remember the original source of this version, maybe from IBM Quest
-Project's official site for very long time. Several modifications have been
-done in order to make it compilable by latest C++ compilers.
+Project's official site or from M. J. Zaki's site for very long time. Several
+modifications have been done in order to make it compilable by latest C++
+compilers.
 
 The license is not clear, but should be an opensource one, maybe GPL.
