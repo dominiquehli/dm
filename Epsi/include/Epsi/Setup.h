@@ -6,7 +6,7 @@
  *
  * Epsi is released under 2-Clause BSD license.
  *
- * $Id: Setup.h 639 2020-08-15 23:45:26Z li $
+ * $Id: Setup.h 641 2020-08-16 15:23:50Z li $
  */
 
 #ifndef _EPSI_SETUP_H_
@@ -20,10 +20,10 @@ namespace Epsi {
 namespace Setup {
 void *Blanc = nullptr; // Ignore this item.
 static bool (*Ignore1L)(const void *) = nullptr; // To ignore 1L patterns.
-static size_type MaxGap = 0; // Maximum number of gaps between two itemsets.
+static size_type MaxDistance = 0; // Maximum distance between two itemsets.
 static size_type MaxLength = 0; // Maximum number of itemsets.
 static size_type MaxOrder = 0; // Maximum number of itemsets.
-static size_type MinGap = 0; // Minimum number of gaps between two itemsets.
+static size_type MinDistance = 0; // Minimum distance between two itemsets.
 static size_type MinLength = 0; // Minimum number of itemsets.
 static size_type MinOrder = 0; // Minimum number of itemsets.
 static bool PruneItems = true; // Prune non-frequent items.

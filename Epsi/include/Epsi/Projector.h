@@ -6,7 +6,7 @@
  *
  * Epsi is released under 2-Clause BSD license.
  *
- * $Id: Projector.h 639 2020-08-15 23:45:26Z li $
+ * $Id: Projector.h 641 2020-08-16 15:23:50Z li $
  */
 
 #ifndef _EPSI_PROJECTOR_H_
@@ -78,10 +78,10 @@ struct ProjectorKL {
         continue;
       }
       if (!first) {
-        if (Setup::MaxGap && gap > Setup::MaxGap) {
+        if (Setup::MaxDistance && gap > Setup::MaxDistance) {
           break;
         }
-        if (Setup::MinGap && gap < Setup::MinGap) {
+        if (Setup::MinDistance && gap < Setup::MinDistance) {
           ++ipos;
           ++iptr;
           continue;

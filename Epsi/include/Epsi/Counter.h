@@ -6,7 +6,7 @@
  *
  * Epsi is released under 2-Clause BSD license.
  *
- * $Id: Counter.h 639 2020-08-15 23:45:26Z li $
+ * $Id: Counter.h 641 2020-08-16 15:23:50Z li $
  */
 
 #ifndef _EPSI_COUNTER_H_
@@ -72,10 +72,10 @@ struct CounterKLC {
         continue;
       }
       if (!first) {
-        if (Setup::MaxGap > 0 && gap > Setup::MaxGap) {
+        if (Setup::MaxDistance > 0 && gap > Setup::MaxDistance) {
           break;
         }
-        if (gap < Setup::MinGap) {
+        if (gap < Setup::MinDistance) {
           continue;
         }
         if (*(iptr - 1) == *t) {
@@ -114,10 +114,10 @@ struct CounterKL {
         gap++;
         continue;
       }
-      if (Setup::MaxGap > 0 && gap > Setup::MaxGap) {
+      if (Setup::MaxDistance > 0 && gap > Setup::MaxDistance) {
         break;
       }
-      if (gap < Setup::MinGap) {
+      if (gap < Setup::MinDistance) {
         continue;
       }
       if (*iptr == item) {
