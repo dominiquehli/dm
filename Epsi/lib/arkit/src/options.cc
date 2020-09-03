@@ -23,14 +23,15 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: options.cc 639 2020-08-15 23:45:26Z li $
+ * $Id: options.cc 643 2020-08-20 14:32:32Z li $
  */
 
+#include <cstring>
+#include <iomanip>
+#include <sstream>
 #include "arkit/error.h"
 #include "arkit/options.h"
 #include "arkit/xstring.h"
-#include <iomanip>
-#include <sstream>
 
 namespace arkit {
 

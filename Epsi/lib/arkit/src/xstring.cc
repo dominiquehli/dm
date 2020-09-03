@@ -23,11 +23,12 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: xstring.cc 625 2020-08-15 14:38:40Z li $
+ * $Id: xstring.cc 643 2020-08-20 14:32:32Z li $
  */
 
-#include "arkit/xstring.h"
+#include <cstring>
 #include <locale>
+#include "arkit/xstring.h"
 
 namespace arkit {
 

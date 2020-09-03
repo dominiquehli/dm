@@ -23,9 +23,10 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $Id: log.cc 625 2020-08-15 14:38:40Z li $
+ * $Id: log.cc 645 2020-08-20 14:33:42Z li $
  */
 
+#include <cstring>
 #include "arkit/log.h"
 
 namespace arkit {
