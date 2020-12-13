@@ -1,4 +1,4 @@
-# Dominique Li's Data Mining Repository
+# Dominique H. Li's Data Mining Repository
 
 - Epsi: Extended PrefixSpan Implementation, a C++ implementation of the PrefixSpan-1L algorithm (Pei et al., ICDE 2001) with several useful
 extensions.
