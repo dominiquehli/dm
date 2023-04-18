@@ -1,33 +1,33 @@
 Epsi is an Extended PrefixSpan Implementation, implemented by
-Dominique Li <dominique.li@univ-tours.fr> according to the original
+Dominique H. Li <dominique.li@univ-tours.fr> according to the original
 PrefixSpan-1L algorithm (Pei et al., ICDE 2001) with several useful
 extensions:
 
 * No item conversion is required by Epsi. Epsi keeps an internal
   dictionary in order to directly work with text input/output files.
 
-* Epsi uses char separators [SEP] (default is `.') to distinguish
-  itemsets an sequences. Itemsets are separated by one separator with
-  spaces (as ` [SEP] ') and sequences are separated by two separators
-  with spaces (as ` [SEP] [SEP] '). Items are naturally separated by
+* Epsi uses char separators [SEP] (by default is '.') to distinguish
+  itemsets in an sequences. Itemsets are separated by one separator with
+  spaces (as ' [SEP] ') and sequences are separated by two separators
+  with spaces (as ' [SEP] [SEP] '). Items are naturally separated by
   spaces.
 
 * Epsi manages maximal/minimal gaps, items, and itemsets while mining
   sequential patterns. Epsi also works for frequent itemset pattern
   mining since itemset patterns are special cases of sequential patterns.
 
-* Epsi outputs patterns once a projected database is no longer used, so
-  the memory usage is low. Epsi supports different data size in order to
-  further reduce the memory usage.
+* Epsi can directly output patterns once a projected database is no longer
+  used, so the memory usage is low. Epsi supports different data size in
+  order to further reduce the memory usage.
 
-* Epsi can treats itemsets as ordered lists to fit wide requirements.
+* Epsi can treat itemsets as ordered lists to fit wide requirements.
 
 * There are other interesting features.
 
 Notice that Epsi is implemented with C++11 standard, old C++ compiler
 may not compiler Epsi correctly.
 
-Type `make' to build Epsi binary. Type `make demo' to run Epsi on a very
-tiny text demo file, and `make test' to run Epsi on a larger file.
+Type 'make' to build Epsi binary. Type 'make demo' to run Epsi on a very
+tiny text demo file, and 'make test' to run Epsi on a larger file.
 
 Any bug report to <dominique.li@univ-tours.fr> is welcome!
